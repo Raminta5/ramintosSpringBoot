@@ -21,4 +21,18 @@ public class CustomerService {
         return customerRepository.findById(customerId);
     }
 
+
+    public Optional<Customer> getCustomerById (int id){
+        return customerRepository.findByCustomerNumber(id);
+    }
+
+    public Optional<Customer> getCustomerByName (String name){
+        return customerRepository.findByCustomerName(name);
+    }
+
+    public Iterable<Customer> getCustomerLikeName (String likeName){
+        return customerRepository.findByCustomerNameLike(likeName);
+    }
+
 }
+
