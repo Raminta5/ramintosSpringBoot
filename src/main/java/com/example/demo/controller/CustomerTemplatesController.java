@@ -38,5 +38,22 @@ public class CustomerTemplatesController {
         return "firstpage";
     }
 
+    // http://127.0.0.1:8080/customer/templates/501
+    @GetMapping(path = "/{id}")
+    public String getCustomer(@PathVariable int id, Model model)
+    {
+        Optional<Customer> customer = customerService.getCustomerById(id);
+
+        if(customer.isEmpty()){
+            return "html_test";
+        }
+
+//        Customer customer = customerService.getCustomerById(id).get();
+        model.addAttribute("key_customer", customer.get());
+        return "customer_th";
+    }
+
+
+
 
 }
