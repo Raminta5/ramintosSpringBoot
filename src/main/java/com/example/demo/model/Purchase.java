@@ -35,6 +35,7 @@ public class Purchase {
                 ", expensesName='" + expensesName + '\'' +
                 ", expensesDate='" + expensesDate + '\'' +
                 ", amount='" + amount + '\'' +
+
                 '}';
     }
 

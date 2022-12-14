@@ -16,7 +16,10 @@ public class BootStrapData implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         expensesRepository.findAll().forEach(System.out::println);
-        System.out.println("-------------------------------");
-        System.out.println(expensesRepository.findById(501));
+//        System.out.println("-------------------------------");
+//        System.out.println(expensesRepository.findById(501));
+
+        System.out.println(expensesRepository.totalSum());
     }
+
 }

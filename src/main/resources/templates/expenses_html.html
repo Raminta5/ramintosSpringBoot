@@ -14,7 +14,6 @@
 <table id="purchaseDataTable" class="table">
     <tr>
         <th class="th">#</th>
-<!--        <th class="th">id</th>-->
         <th class="th">Expenses Name</th>
         <th class="th">Expenses Date</th>
         <th class="th">Amount</th>
@@ -22,13 +21,15 @@
     </tr>
     <tr th:each="purchase : ${listas}">
         <td class="td" th:text="${purchaseStat.index+1}"></td>
-<!--        <td class="td" th:text="${purchase.id}"></td>-->
         <td class="td" th:text="${purchase.expensesName}"></td>
         <td class="td" th:text="${purchase.expensesDate}"></td>
         <td class="td" th:text="${purchase.amount}"></td>
 
     </tr>
+
 </table>
+
+
 
 </body>
 </html>
