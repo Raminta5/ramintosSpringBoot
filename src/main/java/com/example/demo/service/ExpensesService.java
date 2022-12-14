@@ -17,21 +17,11 @@ public class ExpensesService {
         return expensesRepository.findAll();
     }
 
-//    public Optional<Purchase> getPurchaseById(int id){
-//        return expensesRepository.findById(id);
-//    }
-
     public Optional<Purchase> getPurchaseById (int id){
         return expensesRepository.findById(id);
     }
 
-//    public Optional<Purchase> getPurchaseById (int id){
-//        return expensesRepository.findByPurchaseNumber(id);
-//    }
 
-//    public Optional<Purchase> getPurchaseByName (String expensesName){
-//        return expensesRepository.findByCustomerName(name);
-//    }
 
 
 
