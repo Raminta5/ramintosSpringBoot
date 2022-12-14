@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{/styles/purchase/basic.css}" rel="stylesheet"/>
+    <link th:href="@{/styles/purchase/index.css}" rel="stylesheet"/>
+    <link rel="stylesheet" href="/styles/purchase/basic.css">
+    <link rel="stylesheet" href="/styles/purchase/index.css">
+</head>
+<body>
+<div class="purchase" th:object="${key_purchase}">
+    <div class="label"><p>Purchase name: </p></div>
+    <div class="purchase-data">
+        <p th:text="${key_purchase.expensesName}"> Some text here</p>
+    </div>
+    <div class="label"><p>Purchase date: </p></div>
+    <div class="purchase-data">
+        <p th:text="${key_purchase.expensesDate}"> Some text here</p>
+    </div>
+    <div class="label"><p>Amount: </p></div>
+    <div class="purchase-data">
+        <p th:text="${key_purchase.amount}"> Some text here</p>
+    </div>
+</div>
+</body>
+</html>

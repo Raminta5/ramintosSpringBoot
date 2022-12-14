@@ -1,22 +1,22 @@
 package com.example.demo.bootStrap;
 
-import com.example.demo.repository.CustomerRepository;
+import com.example.demo.repository.ExpensesRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 @Component
 public class BootStrapData implements CommandLineRunner {
 
-    private CustomerRepository customerRepository;
+    private ExpensesRepository expensesRepository;
 
-    public BootStrapData(CustomerRepository customerRepository) {
-        this.customerRepository = customerRepository;
+    public BootStrapData(ExpensesRepository expensesRepository) {
+        this.expensesRepository = expensesRepository;
     }
 
     @Override
     public void run(String... args) throws Exception {
-        customerRepository.findAll().forEach(System.out::println);
+        expensesRepository.findAll().forEach(System.out::println);
         System.out.println("-------------------------------");
-        System.out.println(customerRepository.findById(501));
+        System.out.println(expensesRepository.findById(501));
     }
 }
