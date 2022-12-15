@@ -30,3 +30,7 @@ body {
 .column-names {
   background-color: #ecf8ec;
 }
+
+.balance {
+  font-weight: bold;
+}

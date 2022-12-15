@@ -17,4 +17,6 @@ public interface IncomeRepository extends CrudRepository<Income, Integer> {
     @Query("SELECT SUM(incomeAmount) FROM Income")
     BigDecimal totalIncomeSum();
 
+
+
 }

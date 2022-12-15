@@ -28,6 +28,41 @@
     </tr>
 
 </table>
+<p> Total expenses sum: <b th:text="${expensesSum}"> 0.00 </b> € </p>
+
+<br>
+
+<table id="incomeDataTable" class="table">
+    <tr class="column-names">
+        <th class="th">#</th>
+        <th class="th">Income Name</th>
+        <th class="th">Income Date</th>
+        <th class="th">Income Amount</th>
+
+    </tr>
+    <tr th:each="income : ${incomeListas}">
+        <td class="td" th:text="${incomeStat.index+1}"></td>
+        <td class="td" th:text="${income.incomeName}"></td>
+        <td class="td" th:text="${income.incomeDate}"></td>
+        <td class="td" th:text="${income.incomeAmount}"></td>
+
+    </tr>
+
+</table>
+<p> Total income sum: <b th:text="${incomeSum}"> 0.00 </b> € </p>
+
+<br>
+<br>
+
+
+<table id="moneyBalance" class="table">
+    <tr class="column-names">
+        <th class="th">Money Balance</th>
+    </tr>
+    <tr class="balance">
+        <td th:text="${difference}"></td>
+    </tr>
+</table>
 
 
 </body>

@@ -5,24 +5,27 @@ import com.example.demo.repository.ExpensesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.Optional;
 
 @Service
 
 public class ExpensesService {
-@Autowired
+    @Autowired
     private ExpensesRepository expensesRepository;
 
-    public Iterable<Purchase> getAllExpenses(){
+    public Iterable<Purchase> getAllExpenses() {
         return expensesRepository.findAll();
     }
 
-    public Optional<Purchase> getPurchaseById (int id){
+    public Optional<Purchase> getPurchaseById(int id) {
         return expensesRepository.findById(id);
     }
 
 
-
+    public BigDecimal getExpensesSum() {
+        return expensesRepository.totalSum();
+    }
 
 
 }
